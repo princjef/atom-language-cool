@@ -3,7 +3,6 @@
   "version": "0.2.0",
   "description": "Cool language support in Atom",
   "license": "MIT",
-  "main": "index.coffee",
   "engines": {
     "atom": "*",
     "node": "*"
