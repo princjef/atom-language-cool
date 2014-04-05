@@ -1,0 +1,18 @@
+{
+  "name": "language-cool",
+  "version": "0.1.0",
+  "description": "Cool language support in Atom",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {},
+  "homepage": "https://github.com/princjef/atom-language-cool",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/princjef/atom-language-cool.git",
+  },
+  "bugs": {
+    "url": "https://github.com/princjef/atom-language-cool/issues"
+  }
+}
