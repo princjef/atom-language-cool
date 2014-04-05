@@ -1,1 +1,8 @@
 '.source.cool':
+  'class':
+    'prefix': 'class'
+    'body': '''
+      class ${1:TypeName} {
+        $2
+      };
+    '''
