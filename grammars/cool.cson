@@ -1,0 +1,124 @@
+'name': 'Cool'
+'scopeName': 'source.cool'
+'fileTypes': [
+	'cl'
+]
+
+'repository': {
+	'line_comment': {
+		'comment': 'Line Comments'
+		'name': 'comment.line.cool'
+		'begin': '--'
+		'end': '$'
+	}
+
+	'block_comment': {
+		'comment': 'Block Comments'
+		'name': 'comment.block.cool'
+		'begin': '\\(\\*'
+		'end': '\\*\\)'
+		'patterns': [
+			{ 'include': '#block_comment' }
+		]
+	}
+
+	'string': {
+		'comment': 'Strings'
+		'name': 'comment.block.cool'
+		'begin': '(?<!\\\\)\"'
+		'end': '(?<!\\\\)\"'
+		'patterns': [
+			{ 'include': '#string' }
+			{
+				'comment': 'Escape Sequences'
+				'name': 'constant.character.escape.cool'
+				'match': '\\\\(n|t)'
+			}
+		]
+	}
+
+	'class_definition': {
+		'comment': 'Class definition'
+		'name': 'definition.class.cool'
+		'match': '\\b(?i:class)\\s+([A-Z][A-Za-z0-9_]*)(\\s+(?i:inherits)\\s+([A-Z][A-Za-z0-9_]*))?\\b'
+		'captures': {
+			'1': { 'name': 'keyword.cool' },
+			'2': { 'name': 'entity.anem.type.cool' }
+			'4': { 'name': 'keyword.cool' }
+			'5': { 'name': 'entity.name.type.cool' }
+		}
+	}
+
+	'method_definition': {
+		'comment': 'Method definition'
+		'name': 'definition.method.cool'
+		'match': '\\b([a-z][A-Za-z0-9_]*)\\s*\\(\\s*(?:([a-z][A-Za-z0-9_]*)\\s*:\\s*([A-Z][A-Za-z0-9_]*))?(?:\\s*,\\s*([a-z][A-Za-z0-9_]*)\\s*:\\s*([A-Z][A-Za-z0-9_]*))*\\s*\\)\\s*:\\s*([A-Z][A-Za-z0-9_]*)\\b'
+		'captures': {
+			'1': { 'name': 'entity.name.function.cool' }
+			'2': { 'name': 'variable.parameter.cool' }
+			'3': { 'name': 'storage.type.cool' }
+			'4': { 'name': 'variable.parameter.cool' }
+			'5': { 'name': 'storage.type.cool' }
+			'6': { 'name': 'storage.type.cool' }
+		}
+	}
+
+	'integer': {
+		'comment': 'Integer literal'
+		'name': 'number.cool',
+		'match': '\\b([1-9][0-9]*)\\b'
+	}
+
+	'boolean_constant': {
+		'comment': 'Boolean constants'
+		'name': 'definition.constants.words.cool'
+		'match': '\\b((t(?i:rue))|(f(?i:alse)))'
+	}
+
+	'operator': {
+		'comment': 'Language operators'
+		'name': 'keyword.operator.cool'
+		'match': '\\b(@|/|=|<-|<=|<|-|~|+|=>|\\*)\\b'
+	}
+
+	'control': {
+		'comment': 'Control flow tokens'
+		'name': 'keyword.control.cool'
+		'match': '\\b(?i:case|class|else|esac|fi|if|in|inherits|isvoid|let|loop|new|not|of|pool|then|while)\\b'
+	}
+
+	'type': {
+		'comment': 'Type identifier'
+		'name': 'storage.type.cool'
+		'match': '\\b([A-Z][A-Za-z0-9_]*)'
+	}
+
+	'variable': {
+		'comment': 'Variable identifier'
+		'name': 'variable.other.cool'
+		'match': '\\b([a-z][A-Za-z0-9_]*)'
+	}
+}
+
+'patterns': [
+	# Comments
+	{ 'include': '#line_comment' }
+	{ 'include': '#block_comment' }
+
+	# Structures
+	{ 'include': '#class_definition' }
+	{ 'include': '#method_definition' }
+
+	# Literals
+	{ 'include': '#string' }
+	{ 'include': '#integer' }
+
+	# Reserved Words
+	{ 'include': '#boolean_constant' }
+	{ 'include': '#operator' }
+	{ 'include': '#control' }
+
+	# Other Things
+	{ 'include': '#type' }
+	{ 'include': '#variable' }
+]
