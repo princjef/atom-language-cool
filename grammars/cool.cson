@@ -24,7 +24,7 @@
 
 	'string': {
 		'comment': 'Strings'
-		'name': 'comment.block.cool'
+		'name': 'string.cool'
 		'begin': '(?<!\\\\)\"'
 		'end': '(?<!\\\\)\"'
 		'patterns': [
@@ -40,10 +40,10 @@
 	'class_definition': {
 		'comment': 'Class definition'
 		'name': 'definition.class.cool'
-		'match': '\\b(?i:class)\\s+([A-Z][A-Za-z0-9_]*)(\\s+(?i:inherits)\\s+([A-Z][A-Za-z0-9_]*))?\\b'
+		'match': '\\b((?i:class))\\s+([A-Z][A-Za-z0-9_]*)(\\s+((?i:inherits))\\s+([A-Z][A-Za-z0-9_]*))?\\b'
 		'captures': {
 			'1': { 'name': 'keyword.cool' },
-			'2': { 'name': 'entity.anem.type.cool' }
+			'2': { 'name': 'entity.name.type.cool' }
 			'4': { 'name': 'keyword.cool' }
 			'5': { 'name': 'entity.name.type.cool' }
 		}
@@ -78,7 +78,7 @@
 	'operator': {
 		'comment': 'Language operators'
 		'name': 'keyword.operator.cool'
-		'match': '\\b(@|/|=|<-|<=|<|-|~|\\+|=>|\\*)\\b'
+		'match': '(@|/|=|<-|<=|<|-|~|\\+|=>|\\*)'
 	}
 
 	'control': {
