@@ -71,7 +71,7 @@
 
 	'boolean_constant': {
 		'comment': 'Boolean constants'
-		'name': 'definition.constants.words.cool'
+		'name': 'constant.language.cool'
 		'match': '\\b((t(?i:rue))|(f(?i:alse)))'
 	}
 
@@ -91,12 +91,6 @@
 		'comment': 'Type identifier'
 		'name': 'storage.type.cool'
 		'match': '\\b([A-Z][A-Za-z0-9_]*)'
-	}
-
-	'variable': {
-		'comment': 'Variable identifier'
-		'name': 'variable.other.cool'
-		'match': '\\b([a-z][A-Za-z0-9_]*)'
 	}
 }
 
@@ -120,5 +114,4 @@
 
 	# Other Things
 	{ 'include': '#type' }
-	{ 'include': '#variable' }
 ]
