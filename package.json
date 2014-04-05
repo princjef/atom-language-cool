@@ -1,6 +1,6 @@
 {
   "name": "language-cool",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Cool language support in Atom",
   "license": "MIT",
   "engines": {
