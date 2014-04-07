@@ -78,7 +78,7 @@
 	'operator': {
 		'comment': 'Language operators'
 		'name': 'keyword.operator.cool'
-		'match': '(@|/|=|<-|<=|<|-|~|\\+|=>|\\*)'
+		'match': '(=>|<-|<=|@|/|=|<|-|~|\\+|\\*)'
 	}
 
 	'control': {
