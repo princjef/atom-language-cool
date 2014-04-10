@@ -65,7 +65,7 @@
 
 	'integer': {
 		'comment': 'Integer literal'
-		'name': 'number.cool',
+		'name': 'constant.number.cool',
 		'match': '\\b([1-9][0-9]*)\\b'
 	}
 
