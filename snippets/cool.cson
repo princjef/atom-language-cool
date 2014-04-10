@@ -2,7 +2,31 @@
   'class':
     'prefix': 'class'
     'body': '''
-      class ${1:TypeName} {
+      class ${1:ClassName} {
         $2
+      };
+    '''
+  'classi':
+    'prefix': 'classi'
+      'body': '''
+        class ${1:ClassName} inherits ${2:SuperClass} {
+          $3
+        }
+      '''
+  'attr':
+    'prefix': 'attr'
+    'body': '''
+      ${1:name}: ${2:Type};
+    '''
+  'attri':
+    'prefix': 'attri'
+    'body': '''
+      ${1:name}: ${2:Type} <- ${3:initializer};
+    '''
+  'method':
+    'prefix': 'method'
+    'body': '''
+      ${1:name}($2): ${4:ReturnType} {
+        $4
       };
     '''
