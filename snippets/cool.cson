@@ -8,11 +8,11 @@
     '''
   'classi':
     'prefix': 'classi'
-      'body': '''
-        class ${1:ClassName} inherits ${2:SuperClass} {
-          $3
-        }
-      '''
+    'body': '''
+      class ${1:ClassName} inherits ${2:SuperClass} {
+        $3
+      }
+    '''
   'attr':
     'prefix': 'attr'
     'body': '''
