@@ -1,7 +1,8 @@
 'name': 'Cool'
 'scopeName': 'source.cool'
 'fileTypes': [
-	'cl'
+	'cl',
+	'cool'
 ]
 
 'repository': {
